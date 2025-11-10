@@ -1,0 +1,368 @@
+:root {
+    --primary-color: #00adb5;
+    --secondary-color: #e8f4f4;
+    --text-light: #333;
+    --text-dark: #555;
+    --bg-light: #f9f9f9;
+    --white: #ffffff;
+    --shadow: 0 8px 32px rgba(0, 173, 181, 0.8);
+    --shadow-hover: 0 12px 40px rgba(0, 173, 181, 0.6);
+}
+
+.pilot-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 100px;
+}
+
+.overview-section {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 50px;
+    margin-bottom: 80px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    animation: floatIn 1.2s ease-out;
+}
+
+.overview-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, var(--secondary-color), transparent);
+    animation: rotate 20s linear infinite;
+    opacity: 0.3;
+}
+
+.overview-section h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.overview-section p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    position: relative;
+    z-index: 1;
+}
+
+.pilots-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.pilot-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    position: relative;
+}
+
+.pilot-card:nth-child(odd) {
+    animation: slideInUp 0.8s ease-out forwards;
+}
+
+.pilot-card:nth-child(even) {
+    animation: slideInUp 0.8s ease-out 0.2s forwards;
+}
+
+.pilot-card:nth-child(3n) {
+    animation: slideInUp 0.8s ease-out 0.4s forwards;
+}
+
+.pilot-card:nth-child(4n) {
+    animation: slideInUp 0.8s ease-out 0.6s forwards;
+}
+
+.pilot-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-hover);
+}
+
+.pilot-header {
+    background: linear-gradient(135deg, var(--primary-color), #009da8);
+    color: var(--white);
+    padding: 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.pilot-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.pilot-header:hover::after {
+    left: 100%;
+}
+
+.pilot-number {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 700;
+    margin-right: 12px;
+}
+
+.pilot-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), padding 0.6s ease;
+    background: linear-gradient(to bottom, var(--white), var(--secondary-color));
+}
+
+.pilot-content.open {
+    max-height: 200px;
+    padding: 25px;
+}
+
+.pilot-content p {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.mtb-section {
+    background: linear-gradient(135deg, var(--secondary-color), var(--white));
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    margin-bottom: 60px;
+    position: relative;
+    animation: fadeInScale 1s ease-out 1s both;
+}
+
+.mtb-section p {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+
+    0%,
+    100% {
+        transform: translateX(-100%) skewX(-15deg);
+    }
+
+    50% {
+        transform: translateX(100%) skewX(-15deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Scroll-triggered animations */
+.pilot-card.animate {
+    animation-play-state: running;
+}
+
+/* Responsive: added additional breakpoints for tablet and mobile. Preserves existing rules above. */
+@media (max-width: 1024px) {
+    .pilot-section {
+        padding: 50px 40px;
+    }
+
+    .overview-section {
+        margin-bottom: 60px;
+        padding: 40px;
+    }
+
+    /* On wider tablets, show two columns if space allows */
+    .pilots-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+        gap: 24px;
+    }
+
+    .pilot-card {
+        transform: translateY(30px) scale(0.98);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .pilot-section {
+        padding: 40px 24px;
+    }
+
+    .overview-section {
+        padding: 30px 18px;
+        border-radius: 16px;
+    }
+
+    .overview-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .overview-section p {
+        font-size: 1rem;
+    }
+
+    .pilots-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 40px;
+    }
+
+    .pilot-card {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .pilot-header {
+        padding: 18px;
+        font-size: 1rem;
+    }
+
+    .pilot-number {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        margin-right: 10px;
+    }
+
+    .pilot-content.open {
+        max-height: 240px;
+        padding: 18px;
+    }
+
+    .mtb-section {
+        padding: 28px 18px;
+    }
+
+    /* Ensure animations don't make mobile content jump too much */
+    .pilot-card:hover {
+        transform: translateY(0) scale(1);
+        box-shadow: var(--shadow);
+    }
+}
+
+@media (max-width: 480px) {
+    .pilot-section {
+        padding: 30px 14px;
+    }
+
+    .overview-section {
+        padding: 20px 12px;
+        margin-bottom: 40px;
+        border-radius: 12px;
+    }
+
+    .overview-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .overview-section p {
+        font-size: 0.95rem;
+    }
+
+    .pilots-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .pilot-header {
+        padding: 14px;
+        font-size: 0.98rem;
+    }
+
+    .pilot-number {
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        margin-right: 8px;
+        font-size: 0.85rem;
+    }
+
+    .pilot-content.open {
+        max-height: none; /* allow content to expand naturally on very small screens */
+        padding: 14px;
+    }
+
+    .pilot-content p {
+        font-size: 0.95rem;
+    }
+
+    .mtb-section {
+        padding: 20px 12px;
+    }
+}

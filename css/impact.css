@@ -1,0 +1,531 @@
+:root {
+    --primary-color: #00adb5;
+    --secondary-color: #e8f4f4;
+    --text-light: #333;
+    --text-dark: #555;
+    --bg-light: #f9f9f9;
+    --white: #ffffff;
+    --shadow: 0 8px 32px rgba(0, 173, 181, 0.1);
+    --shadow-hover: 0 12px 40px rgba(0, 173, 181, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #484848;
+    line-height: 1.7;
+    background-image: linear-gradient(58deg, #aac3cc, #9ddfdb, #9ddfbd);
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.sparc-dashboard-main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sparc-header-primary-section {
+    text-align: center;
+    padding: 80px 0 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sparc-header-primary-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: radial-gradient(circle, rgba(0, 173, 181, 0.1) 0%, transparent 70%);
+    animation: shimmer 6s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 0;
+    animation: slideInDown 1s ease-out;
+}
+
+.sparc-overview-intro-section {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 50px;
+    margin-bottom: 80px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    animation: floatIn 1.2s ease-out;
+    border: 1px solid rgba(0, 173, 181, 0.1);
+}
+
+.sparc-overview-intro-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, var(--secondary-color), transparent);
+    animation: rotate 20s linear infinite;
+    opacity: 0.3;
+}
+
+.sparc-overview-intro-section p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    position: relative;
+    z-index: 1;
+}
+
+.sparc-impact-domains-primary-section {
+    margin-bottom: 80px;
+}
+
+.sparc-impact-domains-primary-section h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    animation: slideInDown 1s ease-out 0.5s both;
+}
+
+.sparc-impact-domains-primary-section h2::before {
+    content: '';
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.sparc-impact-vertical-stack-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.sparc-impact-domain-card-element {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    position: relative;
+    border-left: 4px solid var(--primary-color);
+}
+
+.sparc-impact-domain-card-element:nth-child(1) {
+    animation: slideInUp 0.8s ease-out forwards;
+}
+
+.sparc-impact-domain-card-element:nth-child(2) {
+    animation: slideInUp 0.8s ease-out 0.2s forwards;
+}
+
+.sparc-impact-domain-card-element:nth-child(3) {
+    animation: slideInUp 0.8s ease-out 0.4s forwards;
+}
+
+.sparc-impact-domain-card-element:nth-child(4) {
+    animation: slideInUp 0.8s ease-out 0.6s forwards;
+}
+
+.sparc-impact-domain-card-element:nth-child(5) {
+    animation: slideInUp 0.8s ease-out 0.8s forwards;
+}
+
+.sparc-impact-domain-card-element:hover {
+    transform: translateX(10px) scale(1.01);
+    box-shadow: var(--shadow-hover);
+}
+
+.sparc-impact-domain-card-header {
+    background: linear-gradient(135deg, var(--primary-color), #009da8);
+    color: var(--white);
+    padding: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.sparc-impact-domain-card-header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.sparc-impact-domain-card-header.sparc-toggle-active::before {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.sparc-impact-domain-card-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.sparc-impact-domain-card-header:hover::after {
+    left: 100%;
+}
+
+.sparc-impact-domain-number-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 700;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.sparc-impact-domain-detailed-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), padding 0.6s ease;
+    background: linear-gradient(to bottom, var(--white), var(--secondary-color));
+}
+
+.sparc-impact-domain-detailed-content.sparc-toggle-active {
+    max-height: 1000px;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.sparc-impact-domain-detailed-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.sparc-impact-domain-detailed-content li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.sparc-impact-domain-detailed-content li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.sparc-impact-domain-detailed-content p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.sparc-explore-extended-dashboard-section {
+    background: linear-gradient(135deg, var(--secondary-color), var(--white));
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    margin-bottom: 60px;
+    position: relative;
+    animation: fadeInScale 1s ease-out 1.2s both;
+    border: 1px solid rgba(0, 173, 181, 0.1);
+}
+
+.sparc-explore-extended-dashboard-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.sparc-explore-extended-dashboard-section h2::before {
+    content: '';
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.sparc-explore-extended-dashboard-section ul {
+    display: inline-block;
+    text-align: left;
+    list-style: none;
+    margin: 20px 0;
+}
+
+.sparc-explore-extended-dashboard-section li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.sparc-explore-extended-dashboard-section li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.sparc-explore-extended-dashboard-section p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-top: 15px;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+
+    0%,
+    100% {
+        transform: translateX(-100%) skewX(-15deg);
+    }
+
+    50% {
+        transform: translateX(100%) skewX(-15deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Scroll-triggered animations */
+.sparc-impact-domain-card-element.sparc-scroll-animate {
+    animation-play-state: running;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sparc-dashboard-main-container {
+        padding: 0 15px;
+    }
+
+    .sparc-header-primary-section {
+        padding: 60px 0 40px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .sparc-overview-intro-section {
+        padding: 30px 20px;
+        margin-bottom: 60px;
+        border-radius: 16px;
+    }
+
+    .sparc-impact-domains-primary-section {
+        margin-bottom: 60px;
+    }
+
+    .sparc-impact-domains-primary-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .sparc-impact-vertical-stack-container {
+        gap: 20px;
+    }
+
+    .sparc-impact-domain-card-element {
+        border-radius: 10px;
+        border-left-width: 3px;
+    }
+
+    .sparc-impact-domain-card-header {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .sparc-impact-domain-number-badge {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 12px;
+    }
+
+    .sparc-impact-domain-card-header::before {
+        right: 15px;
+        border-top-width: 5px;
+        border-left-width: 5px;
+        border-right-width: 5px;
+    }
+
+    .sparc-impact-domain-detailed-content.sparc-toggle-active {
+        padding: 20px;
+        max-height: 800px;
+        overflow-y: auto;
+    }
+
+    .sparc-impact-domain-detailed-content li {
+        padding-left: 20px;
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+    .sparc-impact-domain-detailed-content li::before {
+        font-size: 1em;
+    }
+
+    .sparc-impact-domain-detailed-content p {
+        font-size: 0.95rem;
+    }
+
+    .sparc-explore-extended-dashboard-section {
+        padding: 30px 20px;
+        border-radius: 16px;
+        margin-bottom: 40px;
+    }
+
+    .sparc-explore-extended-dashboard-section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .sparc-explore-extended-dashboard-section ul {
+        margin: 15px 0;
+    }
+
+    .sparc-explore-extended-dashboard-section li {
+        padding-left: 20px;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .sparc-explore-extended-dashboard-section li::before {
+        font-size: 1em;
+    }
+
+    .sparc-explore-extended-dashboard-section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .sparc-header-primary-section {
+        padding: 40px 0 30px;
+    }
+
+    .sparc-overview-intro-section {
+        padding: 20px 15px;
+        margin-bottom: 40px;
+    }
+
+    .sparc-overview-intro-section p {
+        font-size: 1rem;
+    }
+
+    .sparc-impact-domains-primary-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .sparc-impact-domain-card-header {
+        padding: 18px;
+        font-size: 0.95rem;
+    }
+
+    .sparc-impact-domain-detailed-content.sparc-toggle-active {
+        padding: 18px;
+        max-height: 700px;
+        overflow-y: auto;
+    }
+
+    .sparc-explore-extended-dashboard-section {
+        padding: 20px 15px;
+    }
+
+    .sparc-explore-extended-dashboard-section h2 {
+        font-size: 1.4rem;
+    }
+}

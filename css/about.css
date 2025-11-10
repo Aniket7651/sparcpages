@@ -1,0 +1,909 @@
+:root {
+    --primary-color: #00adb5;
+    --secondary-color: #e8f4f4;
+    --text-light: #333;
+    --text-dark: #555;
+    --bg-light: #f9f9f9;
+    --white: #ffffff;
+    --shadow: 0 8px 32px rgba(0, 173, 181, 0.1);
+    --shadow-hover: 0 12px 40px rgba(0, 173, 181, 0.2);
+    --main-bg: #1d274a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #484848;
+    line-height: 1.7;
+    background-image: linear-gradient(58deg, #aac3cc, #9ddfdb, #9ddfbd);
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.sparc-about-main-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sparc-about-header-section {
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    padding: 80px 0 60px;
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.sparc-about-header-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(0, 173, 181, 0.15) 0%, transparent 70%);
+    animation: shimmer 6s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 0;
+    animation: slideInDown 1s ease-out;
+}
+
+.consortium {
+    padding: 50px 20px;
+}
+
+.sparc-about-intro-section {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 50px;
+    margin-bottom: 80px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    animation: floatIn 1.2s ease-out;
+    border: 1px solid rgba(0, 173, 181, 0.1);
+}
+
+.sparc-about-intro-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, var(--secondary-color), transparent);
+    animation: rotate 20s linear infinite;
+    opacity: 0.3;
+}
+
+.sparc-about-intro-section p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    position: relative;
+    z-index: 1;
+}
+
+.sparc-mission-vision-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.sparc-mission-card,
+.sparc-vision-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    border: 1px solid rgba(0, 173, 181, 0.1);
+}
+
+.sparc-mission-card {
+    animation: slideInUp 0.8s ease-out forwards 0.2s;
+}
+
+.sparc-vision-card {
+    animation: slideInUp 0.8s ease-out forwards 0.4s;
+}
+
+.sparc-mission-card:hover,
+.sparc-vision-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.sparc-mission-card h2,
+.sparc-vision-card h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.sparc-mission-card h2::before,
+.sparc-vision-card h2::before {
+    content: '';
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.sparc-mission-card p,
+.sparc-vision-card p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.sparc-impact-section {
+    margin-bottom: 80px;
+}
+
+.sparc-impact-section h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    animation: slideInDown 1s ease-out 0.6s both;
+}
+
+.sparc-impact-vertical-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.sparc-impact-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    position: relative;
+    border-left: 4px solid var(--primary-color);
+}
+
+.sparc-impact-card:nth-child(1) {
+    animation: slideInUp 0.8s ease-out forwards 0.8s;
+}
+
+.sparc-impact-card:nth-child(2) {
+    animation: slideInUp 0.8s ease-out forwards 1s;
+}
+
+.sparc-impact-card:nth-child(3) {
+    animation: slideInUp 0.8s ease-out forwards 1.2s;
+}
+
+.sparc-impact-card:nth-child(4) {
+    animation: slideInUp 0.8s ease-out forwards 1.4s;
+}
+
+.sparc-impact-card:nth-child(5) {
+    animation: slideInUp 0.8s ease-out forwards 1.6s;
+}
+
+.sparc-impact-card:hover {
+    transform: translateY(-10px) scale(1.01);
+    box-shadow: var(--shadow-hover);
+}
+
+.sparc-impact-header {
+    background: linear-gradient(135deg, var(--primary-color), #009da8);
+    color: var(--white);
+    padding: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.sparc-impact-header::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.sparc-impact-header.sparc-toggle-active::before {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.sparc-impact-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.sparc-impact-header:hover::after {
+    left: 100%;
+}
+
+.sparc-impact-number {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 700;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.sparc-impact-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), padding 0.6s ease;
+    background: linear-gradient(to bottom, var(--white), var(--secondary-color));
+}
+
+.sparc-impact-content.sparc-toggle-active {
+    max-height: 1000px;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.sparc-impact-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 15px 0;
+}
+
+.sparc-impact-content li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.sparc-impact-content li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.sparc-impact-content p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.sparc-structure-section {
+    background: linear-gradient(135deg, var(--secondary-color), var(--white));
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    margin-bottom: 60px;
+    position: relative;
+    animation: fadeInScale 1s ease-out 1.8s both;
+    border: 1px solid rgba(0, 173, 181, 0.1);
+}
+
+.sparc-structure-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.sparc-structure-section h2::before {
+    content: '';
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.sparc-structure-section p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+
+    0%,
+    100% {
+        transform: translateX(-100%) skewX(-15deg);
+    }
+
+    50% {
+        transform: translateX(100%) skewX(-15deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Scroll-triggered animations */
+.sparc-impact-card.sparc-scroll-animate {
+    animation-play-state: running;
+}
+
+/* Tablet Responsive (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .sparc-about-main-container {
+        padding: 0 15px;
+        max-width: 900px;
+    }
+
+    .sparc-mission-vision-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .sparc-mission-card,
+    .sparc-vision-card {
+        padding: 35px;
+    }
+
+    .sparc-impact-header {
+        padding: 25px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .sparc-about-main-container {
+        padding: 0 10px;
+    }
+
+    .sparc-about-header-section {
+        padding: 60px 0 40px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .sparc-about-intro-section {
+        padding: 30px 15px;
+        margin-bottom: 60px;
+        border-radius: 16px;
+    }
+
+    .sparc-mission-vision-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .sparc-mission-card,
+    .sparc-vision-card {
+        padding: 30px 20px;
+        border-radius: 14px;
+    }
+
+    .sparc-mission-card h2,
+    .sparc-vision-card h2 {
+        font-size: 1.6rem;
+    }
+
+    .sparc-impact-section {
+        margin-bottom: 60px;
+    }
+
+    .sparc-impact-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .sparc-impact-vertical-stack {
+        gap: 20px;
+    }
+
+    .sparc-impact-card {
+        border-radius: 10px;
+        border-left-width: 3px;
+    }
+
+    .sparc-impact-header {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .sparc-impact-number {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 12px;
+    }
+
+    .sparc-impact-header::before {
+        right: 15px;
+        border-top-width: 5px;
+        border-left-width: 5px;
+        border-right-width: 5px;
+    }
+
+    .sparc-impact-content.sparc-toggle-active {
+        padding: 20px;
+        max-height: 800px;
+        overflow-y: auto;
+    }
+
+    .sparc-impact-content li {
+        padding-left: 20px;
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+    .sparc-impact-content li::before {
+        font-size: 1em;
+    }
+
+    .sparc-impact-content p {
+        font-size: 0.95rem;
+    }
+
+    .sparc-structure-section {
+        padding: 30px 15px;
+        border-radius: 16px;
+        margin-bottom: 40px;
+    }
+
+    .sparc-structure-section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .sparc-structure-section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sparc-about-main-container {
+        padding: 0 8px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .sparc-about-header-section {
+        padding: 40px 0 30px;
+    }
+
+    .sparc-about-intro-section {
+        padding: 20px 12px;
+        margin-bottom: 40px;
+    }
+
+    .sparc-about-intro-section p {
+        font-size: 1rem;
+    }
+
+    .sparc-mission-card,
+    .sparc-vision-card {
+        padding: 25px 15px;
+    }
+
+    .sparc-mission-card h2,
+    .sparc-vision-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .sparc-impact-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .sparc-impact-header {
+        padding: 18px;
+        font-size: 0.95rem;
+    }
+
+    .sparc-impact-content.sparc-toggle-active {
+        padding: 18px;
+        max-height: 700px;
+        overflow-y: auto;
+    }
+
+    .sparc-structure-section {
+        padding: 20px 12px;
+    }
+
+    .sparc-structure-section h2 {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+
+
+
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    animation: slideInDown 1s ease-out;
+}
+
+.overview-section {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 50px;
+    margin-bottom: 80px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    animation: floatIn 1.2s ease-out;
+    color: var(--text-dark);
+}
+
+.overview-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, var(--secondary-color), transparent);
+    animation: rotate 20s linear infinite;
+    opacity: 0.3;
+}
+
+.overview-section p {
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.wp-section {
+    margin-bottom: 80px;
+}
+
+.wp-section h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.wp-table-wrapper {
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+th,
+td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background: linear-gradient(135deg, var(--primary-color), #009da8);
+    color: white;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+tr:hover {
+    background: var(--secondary-color);
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+.governance-section {
+    background: linear-gradient(135deg, var(--secondary-color), var(--white));
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    margin-bottom: 60px;
+    position: relative;
+    color: var(--text-dark);
+}
+
+.governance-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.governance-section h2::before {
+    content: '●';
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.governance-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.governance-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.governance-list li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.roles-section {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    margin-bottom: 60px;
+    position: relative;
+    color: var(--text-dark);
+}
+
+.roles-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.roles-section h2::before {
+    content: '●';
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.roles-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.roles-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.roles-list li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+@keyframes shimmer {
+
+    0%,
+    100% {
+        transform: translateX(-100%) skewX(-15deg);
+    }
+
+    50% {
+        transform: translateX(100%) skewX(-15deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .overview-section {
+        padding: 30px 20px;
+    }
+
+    .wp-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .wp-table-wrapper {
+        border-radius: 12px;
+    }
+
+    th,
+    td {
+        padding: 12px 8px;
+        font-size: 0.9rem;
+    }
+
+    .governance-section,
+    .roles-section {
+        padding: 30px 20px;
+    }
+
+    .governance-section h2,
+    .roles-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .governance-list li,
+    .roles-list li {
+        font-size: 1rem;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .overview-section {
+        padding: 25px 15px;
+    }
+
+    .wp-section h2 {
+        font-size: 1.5rem;
+    }
+
+    th,
+    td {
+        padding: 10px 6px;
+        font-size: 0.85rem;
+    }
+
+    .governance-section,
+    .roles-section {
+        padding: 25px 15px;
+    }
+}

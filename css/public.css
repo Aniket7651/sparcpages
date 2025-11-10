@@ -1,0 +1,292 @@
+:root {
+    --primary-color: #00adb5;
+    --secondary-color: #e8f4f4;
+    --text-light: #ffffff;
+    --text-dark: #333;
+    --bg-main: #1d274a;
+    --card-bg: #ffffff;
+    --shadow: 0 10px 30px rgba(0, 173, 181, 0.15);
+    --shadow-hover: 0 15px 40px rgba(0, 173, 181, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #484848;
+    line-height: 1.7;
+    background-image: linear-gradient(58deg, #aac3cc, #9ddfdb, #9ddfbd);
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.sparc-outputs-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sparc-outputs-header {
+    text-align: center;
+    padding: 80px 0 60px;
+    position: relative;
+}
+
+.sparc-outputs-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0, 173, 181, 0.2), transparent 70%);
+    animation: pulseGlow 8s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    position: relative;
+    z-index: 0;
+    animation: fadeInDown 1s ease-out;
+}
+
+.sparc-tabs-wrapper {
+    margin: 80px 0;
+}
+
+.sparc-tabs-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid rgba(0, 173, 181, 0.3);
+    padding-bottom: 15px;
+}
+
+.sparc-tab-button {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sparc-tab-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 173, 181, 0.2), transparent);
+    transition: left 0.6s;
+}
+
+.sparc-tab-button:hover::before {
+    left: 100%;
+}
+
+.sparc-tab-button.active {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: var(--shadow-hover);
+}
+
+.sparc-tab-content {
+    display: none;
+    background: var(--card-bg);
+    color: var(--text-dark);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    animation: fadeInUp 0.8s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.sparc-tab-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sparc-tab-content h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.sparc-tab-content h2::before {
+    content: '';
+    margin-right: 12px;
+    font-size: 1.2em;
+}
+
+.sparc-tab-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sparc-tab-content li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.sparc-tab-content li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.3em;
+    top: -2px;
+}
+
+.sparc-tab-content p {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .sparc-tabs-nav {
+        gap: 10px;
+    }
+
+    .sparc-tab-button {
+        padding: 10px 18px;
+        font-size: 1rem;
+    }
+
+    .sparc-tab-content {
+        padding: 40px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .sparc-outputs-container {
+        padding: 0 15px;
+    }
+
+    .sparc-outputs-header {
+        padding: 60px 0 40px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .sparc-tabs-nav {
+        flex-direction: column;
+        align-items: center;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .sparc-tab-button {
+        width: 90%;
+        text-align: center;
+        border-radius: 12px;
+        padding: 15px;
+        border: 1px solid rgba(0, 173, 181, 0.3);
+    }
+
+    .sparc-tab-button.active {
+        border-color: var(--primary-color);
+    }
+
+    .sparc-tab-content {
+        padding: 30px 20px;
+        border-radius: 16px;
+    }
+
+    .sparc-tab-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .sparc-tab-content li {
+        font-size: 1rem;
+        padding-left: 25px;
+    }
+
+    .sparc-tab-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .sparc-outputs-header {
+        padding: 40px 0 30px;
+    }
+
+    .sparc-tab-button {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .sparc-tab-content {
+        padding: 25px 15px;
+    }
+
+    .sparc-tab-content h2 {
+        font-size: 1.5rem;
+    }
+}

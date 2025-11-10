@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPARC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="icon" href="imgs/sparcSign-transparent.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="scroll-to-top">↑</div>
+
+    <header>
+        <div class="mobile-menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <img src="imgs/Sparc_logo_positive_onecolor_tagline_RGB.png" alt="SPARC Logo">
+
+        <nav>
+            <ul>
+                <li><a href="Index.html" class="dropdown-button no-underline">Home</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-button">About SPARC</button>
+                        <div class="dropdown-content">
+                            <a href="Index.html#about">Overview</a>
+                            <a href="Index.html#objective">Objectives & Approach</a>
+                            <a href="Index.html#">Project Structure & Work Packages</a>
+                            <a href="Index.html#consort">Consortium Partners</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Pilots</button>
+                        <div class="dropdown-content">
+                            <a href="Index.html#pilot">Cancer Pilots Overview</a>
+                            <a href="Index.html#pilot">Results & Insights</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Training & Engagement</button>
+                        <div class="dropdown-content">
+                            <a href="Index.html#training">Training for Health Professionals</a>
+                            <a href="Index.html#training">Training for Patients</a>
+                            <a href="Index.html#training">Engagement & Twinning</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Policy & Impact</button>
+                        <div class="dropdown-content">
+                            <a href="Index.html#impact">EU & National Alignment</a>
+                            <a href="Index.html#impact">Equity & Sustainability</a>
+                            <a href="Index.html#impact">Impact Dashboard</a>
+                            <a href="Index.html#impact">Synergies</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Results</button>
+                        <div class="dropdown-content">
+                            <a href="Index.html#result">Deliverables & Publications</a>
+                            <a href="Index.html#result">Data Architecture & Tools</a>
+                            <a href="Index.html#result">Pilot Results & Insights</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-button">News & Media</button>
+                        <div class="dropdown-content">
+                            <a href="#">Newsroom</a>
+                            <a href="#">Events & Conferences</a>
+                            <a href="#">Gallery</a>
+                            <a href="#">Press Releases</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Contact & Acknowledgement</button>
+                        <div class="dropdown-content">
+                            <a href="#">Contact Us</a>
+                            <a href="#">Join the Network</a>
+                            <a href="#">Funding & Credits</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <link rel="stylesheet" href="css/about.css">
+    <div class="sparc-about-main-container">
+        <header class="sparc-about-header-section" style="background: none;">
+            <h1>About SPARC</h1>
+        </header>
+
+        <section class="sparc-about-intro-section">
+            <p>SPARC is an EU4Health-funded initiative supporting the adoption of personalised cancer medicine across
+                Europe. The project enhances diagnostic capacity, strengthens workforce skills, empowers patients, and
+                supports policy frameworks that ensure long-term sustainability.</p>
+        </section>
+
+        <section class="sparc-mission-vision-section">
+            <div class="sparc-mission-card">
+                <h2>Mission</h2>
+                <p>To make personalised cancer medicine accessible, equitable, and sustainable across Europe through
+                    innovation, collaboration, and capacity-building.</p>
+            </div>
+            <div class="sparc-vision-card">
+                <h2>Vision</h2>
+                <p>A European healthcare landscape where personalised oncology tools — such as genomics, liquid biopsy,
+                    and AI-assisted decision support — are integrated into standard care for all patients.</p>
+            </div>
+        </section>
+
+        <section class="sparc-impact-section">
+            <h2>How SPARC Creates Impact</h2>
+            <div class="sparc-impact-vertical-stack">
+                <div class="sparc-impact-card">
+                    <div class="sparc-impact-header" onclick="toggleSparcImpact(this)">
+                        <span class="sparc-impact-number">1</span>
+                        <span>Advancing Diagnostic Innovation</span>
+                    </div>
+                    <div class="sparc-impact-content">
+                        <p>SPARC promotes widespread adoption of cutting-edge diagnostic tools by:</p>
+                        <ul>
+                            <li>Expanding the use of next-generation sequencing</li>
+                            <li>Supporting the integration of liquid biopsy into clinical workflows</li>
+                            <li>Enhancing digital pathology and imaging data contributions</li>
+                            <li>Deploying AI-based tools to assist with variant interpretation and decision-making</li>
+                        </ul>
+                        <p>These innovations reduce diagnostic delays and help clinicians identify more precise
+                            treatment options.</p>
+                    </div>
+                </div>
+
+                <div class="sparc-impact-card">
+                    <div class="sparc-impact-header" onclick="toggleSparcImpact(this)">
+                        <span class="sparc-impact-number">2</span>
+                        <span>Strengthening Clinical Decision Pathways</span>
+                    </div>
+                    <div class="sparc-impact-content">
+                        <p>SPARC reinforces the role of MTBs by:</p>
+                        <ul>
+                            <li>Providing digital platforms for case sharing</li>
+                            <li>Enabling participation of experts from multiple countries</li>
+                            <li>Offering decision-support tools to help interpret molecular findings</li>
+                            <li>Establishing consistent workflows across institutions</li>
+                        </ul>
+                        <p>This leads to better coordination, standardisation, and transparency.</p>
+                    </div>
+                </div>
+
+                <div class="sparc-impact-card">
+                    <div class="sparc-impact-header" onclick="toggleSparcImpact(this)">
+                        <span class="sparc-impact-number">3</span>
+                        <span>Supporting Patients and Communities</span>
+                    </div>
+                    <div class="sparc-impact-content">
+                        <p>The project supports patients by:</p>
+                        <ul>
+                            <li>Developing educational resources that explain genomics, biomarkers, and personalised
+                                therapies</li>
+                            <li>Creating digital materials with patient organisations</li>
+                            <li>Improving cancer literacy</li>
+                            <li>Supporting patient involvement in developing care pathways</li>
+                        </ul>
+                        <p>This ensures that personalised medicine remains patient-centered.</p>
+                    </div>
+                </div>
+
+                <div class="sparc-impact-card">
+                    <div class="sparc-impact-header" onclick="toggleSparcImpact(this)">
+                        <span class="sparc-impact-number">4</span>
+                        <span>Building Workforce Capacity</span>
+                    </div>
+                    <div class="sparc-impact-content">
+                        <p>SPARC delivers:</p>
+                        <ul>
+                            <li>Modular training covering genomics, liquid biopsy, AI interpretation, and ethics</li>
+                            <li>Real-world case studies for clinicians</li>
+                            <li>Twinning activities and exchange programmes</li>
+                            <li>Materials tailored for different professional roles</li>
+                        </ul>
+                        <p>This helps address Europe’s precision oncology skills gap.</p>
+                    </div>
+                </div>
+
+                <div class="sparc-impact-card">
+                    <div class="sparc-impact-header" onclick="toggleSparcImpact(this)">
+                        <span class="sparc-impact-number">5</span>
+                        <span>Driving Sustainability and Policy Progress</span>
+                    </div>
+                    <div class="sparc-impact-content">
+                        <p>The project develops:</p>
+                        <ul>
+                            <li>Policy recommendations aligned with EU strategies</li>
+                            <li>Sustainability frameworks to maintain personalised medicine beyond the project’s
+                                lifetime</li>
+                            <li>Equity frameworks identifying barriers and proposing solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sparc-structure-section">
+            <h2>Project Structure</h2>
+            <p>The project is organised into nine work packages focused on coordination, data and evidence, pilots,
+                digital tools, MTBs, training, patient engagement, policy, and dissemination.<br><br>SPARC brings
+                together a consortium of clinical, academic, technological, and patient-centred organisations across
+                Europe under the coordination of the Universidad Politécnica de Madrid.</p>
+        </section>
+
+        <section class="overview-section">
+            <h2>Project Structure & Work Packages</h2>
+            <p>SPARC is organised into nine Work Packages (WPs) that together cover scientific, clinical, technological, training, patient, and policy dimensions:</p>
+        </section>
+
+        <section class="wp-section">
+            <h2>Work Packages</h2>
+            <div class="wp-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>WP</th>
+                            <th>Title</th>
+                            <th>Lead Institution</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>WP1</td>
+                            <td>Project Coordination</td>
+                            <td>UPM</td>
+                            <td>Consortium management, ethics & data protection, alignment with PCM JA</td>
+                        </tr>
+                        <tr>
+                            <td>WP2</td>
+                            <td>Systematic Collection of Evidence</td>
+                            <td>UCSC</td>
+                            <td>Evidence review, NGS & LB protocols, consensus methodologies</td>
+                        </tr>
+                        <tr>
+                            <td>WP3</td>
+                            <td>Novel Liquid Biopsy & NGS Pilots</td>
+                            <td>UNIFI</td>
+                            <td>Clinical pilot implementation across 7 cancer types</td>
+                        </tr>
+                        <tr>
+                            <td>WP4</td>
+                            <td>Molecular Tumour Boards & Tools</td>
+                            <td>IISLAFE</td>
+                            <td>MTB integration models and cross-site evaluation</td>
+                        </tr>
+                        <tr>
+                            <td>WP5</td>
+                            <td>Digital Tools for Precision Oncology</td>
+                            <td>Hospital da Luz</td>
+                            <td>Assessment and reference specification of AI, tele-oncology, digital ecosystem</td>
+                        </tr>
+                        <tr>
+                            <td>WP6</td>
+                            <td>Training and Certification</td>
+                            <td>CHU Nice</td>
+                            <td>Education programmes, certification procedures</td>
+                        </tr>
+                        <tr>
+                            <td>WP7</td>
+                            <td>Patient & Stakeholder Engagement</td>
+                            <td>Lungs Europe</td>
+                            <td>Co-creation workshops, literacy materials, engagement framework</td>
+                        </tr>
+                        <tr>
+                            <td>WP8</td>
+                            <td>Inequalities & Sustainability</td>
+                            <td>ELLOK</td>
+                            <td>Equity mapping, policy guidelines, business models</td>
+                        </tr>
+                        <tr>
+                            <td>WP9</td>
+                            <td>Dissemination & Policy Outreach</td>
+                            <td>EAPM</td>
+                            <td>Communication, stakeholder outreach, website & events</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="governance-section">
+            <h2>Governance Bodies</h2>
+            <ul class="governance-list">
+                <li>Action Coordination Team (UPM) – overall leadership and daily operations</li>
+                <li>Project Board – strategic decision-making (all partners)</li>
+                <li>Work Package Leaders Board – monthly operational alignment</li>
+                <li>Scientific Advisory Board – independent scientific oversight</li>
+            </ul>
+        </section>
+
+        <section class="roles-section">
+            <h2>Dedicated Roles</h2>
+            <p>Dedicated roles ensure compliance and quality:</p>
+            <ul class="roles-list">
+                <li>Ethics Manager (UCSC)</li>
+                <li>Data Protection Officer (UPM)</li>
+                <li>Quality Assurance Manager (UPM)</li>
+                <li>Equity & Sustainability Manager (ELLOK)</li>
+                <li>Communication Manager (EAPM)</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <script>
+        function toggleSparcImpact(header) {
+            const content = header.nextElementSibling;
+            const card = header.closest('.sparc-impact-card');
+            content.classList.toggle('sparc-toggle-active');
+            header.classList.toggle('sparc-toggle-active');
+            card.classList.add('sparc-scroll-animate');
+        }
+
+        // Intersection Observer for scroll animations (scoped to avoid global redeclaration errors)
+        (function(){
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const localObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('sparc-scroll-animate');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.sparc-impact-card').forEach(card => {
+                localObserver.observe(card);
+            });
+        })();
+
+        // Smooth scroll behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+    </script>
+
+    <!-- Partner carousel (same as Index) -->
+    <section class="consortium" id="consort">
+
+        <h1>Consortium Partners</h1>
+        <p>The SPARC consortium unites 17 organisations from eight EU Member States, representing clinical excellence,
+            academic leadership, technological innovation, and patient advocacy.</p>
+        <div class="partner-slideshow-container">
+            <div class="partner-track">
+            <div class="partner-slides">
+                <img src="imgs/partners/UPM-LOGO-68eea845.webp" alt="Universidad Politécnica de Madrid (UPM)">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/cs_logo_hospital_luz_d53c7e5e7f.PNG" alt="Hospital da Luz">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/CHU_Nice_Logo.svg.png" alt="Centre Hospitalier Universitaire de Nice">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/logo-iislafe-blanc.svg" alt="Fundación IIS La Fe">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/235276_cnio.png" alt="CNIO">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/Universita-cattolica_512px.png" alt="Università Cattolica del Sacro Cuore">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/Logo_universita_firenze.svg.png" alt="Università degli Studi di Firenze">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/Logotipo_Universidad_de_Navarra_negro_sobre_blanco-SVG.svg.png" alt="Universidad de Navarra">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/igichp.png" alt="Instytut Gruźlicy i Chorób Płuc">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/VHiOENG2024.png" alt="Vall d'Hebron Institute of Oncology">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/European-Lung-Foundation.webp" alt="Lungs Europe">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/logo_MWS2.png" alt="National Melanoma Society">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/ELLOK-Logo_EN.png" alt="ELLOK">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/ECL.png" alt="ECL">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/siope.png" alt="SIOPE">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/ISLB.PNG" alt="ISLB">
+            </div>
+            <div class="partner-slides">
+                <img src="imgs/partners/Screenshot-2020-09-25-at-13.13.06.PNG" alt="EAPM">
+            </div>
+
+            </div>
+            <a class="prev">❮</a>
+            <a class="next">❯</a>
+        </div>
+
+        <div class="partner-dots"></div>
+
+    </section>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <footer>
+        <div class="social-media">
+
+            <a href="https://x.com/sparc_eu_?s=21">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                </svg></a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                </svg></a>
+
+        </div>
+        <div class="footer-content">
+            <div class="contact-div">
+                <h3>Contact Us</h3>
+                <span>
+                    <p>For general inquiries and project coordination:</p>
+                    <p>Manuel Ottaviano</p>
+                    <p>Project Coordinator, Universidad Politécnica de Madrid (UPM)</p>
+                    <p><a href="malto:manuel.ottaviano@upm.es" class="mail-link">manuel.ottaviano@upm.es</a></p>
+                    <br>
+                    <p>For media and policy outreach:</p>
+                    <p>Denis Horgan</p>
+                    <p>Executive Director, European Alliance for Personalised Medicine (EAPM)</p>
+                    <p><a href="mailto:denishhorgan@euapm.eu" class="mail-link">denishhorgan@euapm.eu</a></p>
+                </span>
+            </div>
+
+            <div class="footer-links">
+                <a href="impactdashboard.html">Policy & Impact</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">News & Media</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+        <img src="imgs/Sparc_logo_positive_color_tagline_RGB.png" alt="SPARC Logo">
+        <p>SPARC is funded by the EU4Health program of the European Union under Grant Agreement No. <strong>101232874</strong>.<br>However, the content of this website represents the views of its authors and does not reflect the opinions of the European Union or The European Commission and neither authority can be held responsible for content displayed on this website.</p>
+        <p>&copy; 2025 SPARC. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menuIcon = document.querySelector('.mobile-menu-icon');
+            const nav = document.querySelector('nav ul');
+
+            menuIcon.classList.toggle('active');
+            nav.classList.toggle('show');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const nav = document.querySelector('nav ul');
+            const menuIcon = document.querySelector('.mobile-menu-icon');
+
+            if (!nav.contains(event.target) && !menuIcon.contains(event.target) && nav.classList.contains('show')) {
+                nav.classList.remove('show');
+                menuIcon.classList.remove('active');
+            }
+        });
+    </script>
+    <script src="js/dynamics.js"></script>
+</body>
+
+</html>
