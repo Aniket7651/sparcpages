@@ -194,14 +194,14 @@ h1 {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #134387a9;
+    background-color: #8efceda9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
-    color: aqua;
+    color: rgb(67, 67, 67);
     padding: 10px 12px;
     text-decoration: none;
     display: block;
@@ -222,7 +222,6 @@ h1 {
     text-shadow: 0 2px 4px #b9d6ffa9;
     transform: translateY(-10px);
 }
-
 
 footer {
     text-align: center;
@@ -245,13 +244,11 @@ footer img {
 footer img:hover {
     transform: scale(1.03);
 }
-
 .social-media a {
     margin: 0 10px;
     color: #00adb5;
     transition: all 0.3s ease;
 }
-
 .social-media svg {
     width: clamp(20px, 3vw, 30px);
     height: auto;
@@ -275,7 +272,6 @@ footer img:hover {
 
 .footer-links a {
     color: #00adb5;
-    margin: 0 10px;
     text-decoration: none;
 }
 
@@ -345,7 +341,7 @@ footer img:hover {
         right: -100%;
         width: 80%;
         height: 100vh;
-        background-color: rgba(29, 39, 74, 0.98);
+        background-color: rgba(210, 250, 255, 0.58);
         flex-direction: column;
         padding: 80px 20px;
         transition: right 0.3s ease;
