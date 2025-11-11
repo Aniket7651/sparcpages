@@ -223,8 +223,6 @@
 .obj-card p {
     font-size: 0.95rem;
     line-height: 1.6;
-
-    transform: scale(1.05);
     /* Maintain tilt on hover */
 
 }
@@ -395,8 +393,8 @@
 }
 
 .training ul li {
-    font-size: clamp(.8rem, 3vw, 1.1rem);
-    line-height: 1.6;
+    font-size: clamp(.8rem, 3vw, 1rem);
+    font-weight: 500;
 }
 
 
@@ -445,6 +443,10 @@
     gap: 20px;
     align-items: center;
     animation: fadeIn 0.5s ease-in-out;
+}
+
+ul li {
+    font-family: 'Inter', sans-serif;
 }
 
 .content ul {
