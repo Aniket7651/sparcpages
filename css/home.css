@@ -642,8 +642,7 @@ ul li {
     /* Tighter spacing */
     position: relative;
     padding-left: 18px;
-    font-size: 1em;
-    /* Smaller font */
+    font-size: 0.85em; /* Match the font size of <p> elements */
 }
 
 .sparc-policy-flip-card-list li::before {
@@ -926,6 +925,7 @@ ul li {
     padding-left: 0;
     margin-bottom: 8px;
     text-align: left;
+    
     /* Removed max-height and overflow-y to avoid scrollbars */
 }
 
@@ -933,6 +933,7 @@ ul li {
     margin-bottom: 5px;
     position: relative;
     padding-left: 18px;
+    font-size: 1em;
 }
 
 .sparc-result-content-list li::before {
