@@ -85,7 +85,7 @@ h1 {
 }
 
 .sparc-synergies-intro-section p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--text-dark);
     position: relative;
     z-index: 1;
@@ -144,11 +144,6 @@ h1 {
     position: relative;
 }
 
-.sparc-synergies-timeline-content h2::before {
-    content: '';
-    font-size: 1.2em;
-    margin-right: 10px;
-}
 
 .sparc-synergies-timeline-content p,
 .sparc-synergies-timeline-content ul {
@@ -193,7 +188,7 @@ h1 {
 
 .sparc-synergies-timeline-item:nth-child(even) .sparc-synergies-timeline-marker {
     left: auto;
-    right: 50%;
+    right: 48%;
     transform: translateX(50%);
 }
 
@@ -241,9 +236,15 @@ h1 {
 }
 
 .sparc-synergies-national-section p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    text-align: left;
     color: var(--text-dark);
     margin-top: 15px;
+}
+
+.sparc-synergies-national-section ul {
+    text-align: left;
+    display: block;
 }
 
 .sparc-synergies-why-section {
@@ -272,7 +273,7 @@ h1 {
 }
 
 .sparc-synergies-why-section ul {
-    display: inline-block;
+    display: block;
     text-align: left;
     list-style: none;
     margin: 20px 0;
@@ -293,6 +294,10 @@ h1 {
     color: var(--primary-color);
     font-weight: bold;
     font-size: 1.2em;
+}
+
+p, ul li {
+    font-size: 1rem; /* Unified font size for paragraphs and list items */
 }
 
 @keyframes slideInDown {
@@ -561,6 +566,7 @@ h1 {
         padding: 20px 15px;
         margin-left: 35px;
         margin-right: -8px;
+        max-width: fit-content;
     }
 
     .sparc-synergies-timeline-content h2 {

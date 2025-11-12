@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/base.css?v=1.1">
+    <link rel="stylesheet" href="css/base.css?v=1.0">
     <link rel="icon" href="imgs/sparcSign-transparent.png" type="image/x-icon">
 </head>
 
@@ -106,8 +106,8 @@
     </header>
 
 
-    <link rel="stylesheet" href="css/home.css?v=1.1">
-    <link rel="stylesheet" href="css/home2.css?v=1.1">
+    <link rel="stylesheet" href="css/home.css?v=1.0">
+    <link rel="stylesheet" href="css/home2.css?v=1.0">
 
 
 
@@ -123,7 +123,7 @@
                     universities,
                     research institutions, and patient organisations, SPARC builds the framework for implementing
                     personalised
-                    medicine into real-world healthcare systems — ensuring that scientific innovation translates into
+                    medicine into real-world healthcare systems, ensuring that scientific innovation translates into
                     tangible
                     benefits for all patients.</p>
             </div>
@@ -290,7 +290,7 @@
                 <div class="pilot-card">
                     <div class="pilot-header" onclick="togglePilot(this)">
                         <span class="pilot-number">1</span>
-                        <span>Lung Cancer: Evaluation of targeted NGS and LB platforms in non-small-cell lung cancer
+                        <span>Lung Cancer — Evaluation of targeted NGS and LB platforms in non-small-cell lung cancer
                             (stages III-IV), assessing feasibility, sensitivity, and implementation barriers.</span>
                     </div>
                     <div class="pilot-content">
@@ -427,10 +427,10 @@
                 <img src="imgs/partners/VHiOENG2024.png" alt="Vall d'Hebron Institute of Oncology">
             </div>
             <div class="partner-slides">
-                <img src="imgs/partners/European-Lung-Foundation.webp" alt="Lungs Europe">
+                <img src="imgs/partners/European-Lung-Foundation.PNG" alt="Lungs Europe">
             </div>
             <div class="partner-slides">
-                <img src="imgs/partners/logo_MWS2.png" alt="National Melanoma Society">
+                <img src="imgs/partners/Logo_melanom.webp" alt="National Melanoma Society">
             </div>
             <div class="partner-slides">
                 <img src="imgs/partners/ELLOK-Logo_EN.png" alt="ELLOK">
@@ -814,13 +814,21 @@
         </div>
     </footer>
 
+    <style>
+        .fixed-cross {
+            position: fixed;
+        }
+    </style>
+
     <script>
         function toggleMenu() {
             const menuIcon = document.querySelector('.mobile-menu-icon');
             const nav = document.querySelector('nav ul');
 
             menuIcon.classList.toggle('active');
+            menuIcon.classList.toggle('fixed-cross');
             nav.classList.toggle('show');
+           
         }
 
         // Close menu when clicking outside

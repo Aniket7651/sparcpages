@@ -259,15 +259,22 @@
         <p>&copy; 2025 SPARC. All rights reserved.</p>
     </footer>
 
+  <style>
+        .fixed-cross {
+            position: fixed;
+        }
+    </style>
+
     <script>
         function toggleMenu() {
             const menuIcon = document.querySelector('.mobile-menu-icon');
             const nav = document.querySelector('nav ul');
 
             menuIcon.classList.toggle('active');
+            menuIcon.classList.toggle('fixed-cross');
             nav.classList.toggle('show');
+           
         }
-
         // Close menu when clicking outside
         document.addEventListener('click', function (event) {
             const nav = document.querySelector('nav ul');

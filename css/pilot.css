@@ -24,6 +24,10 @@ body {
     overflow-x: hidden;
 }
 
+p, ul li {
+    font-size: 1rem; /* Unified font size for paragraphs and list items */
+}
+
 .pilot-container {
     max-width: 1300px;
     margin: 0 auto;
@@ -36,7 +40,7 @@ body {
     position: relative;
 }
 
-.pilot-header::before {
+/* .pilot-header::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -48,7 +52,7 @@ body {
     transform: translate(-50%, -50%);
     animation: breathe 15s ease-in-out infinite;
     border-radius: 50%;
-}
+} */
 
 h1 {
     font-size: 4.2rem;
@@ -238,11 +242,17 @@ h1 {
     padding-left: 0;
 }
 
+.pilot-demo-content p {
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
 .pilot-demo-content li {
     position: relative;
     padding-left: 30px;
     margin-bottom: 15px;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: var(--text-dark);
 }
 
@@ -252,8 +262,9 @@ h1 {
     left: 0;
     color: var(--primary);
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.25rem;
 }
+
 
 @keyframes titleFloat {
 
@@ -396,8 +407,9 @@ h1 {
     }
 
     .pilot-demo-content li {
-        font-size: 1rem;
+        font-size: 1.25rem;
         padding-left: 25px;
+        font-weight: 400;
     }
 }
 

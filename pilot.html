@@ -283,6 +283,11 @@
         <p>SPARC is funded by the EU4Health program of the European Union under Grant Agreement No. <strong>101232874</strong>.<br>However, the content of this website represents the views of its authors and does not reflect the opinions of the European Union or The European Commission and neither authority can be held responsible for content displayed on this website.</p>
         <p>&copy; 2025 SPARC. All rights reserved.</p>
     </footer>
+<style>
+        .fixed-cross {
+            position: fixed;
+        }
+    </style>
 
     <script>
         function toggleMenu() {
@@ -290,7 +295,9 @@
             const nav = document.querySelector('nav ul');
 
             menuIcon.classList.toggle('active');
+            menuIcon.classList.toggle('fixed-cross');
             nav.classList.toggle('show');
+           
         }
 
         // Close menu when clicking outside
