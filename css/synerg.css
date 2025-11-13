@@ -161,6 +161,8 @@ h1 {
     position: relative;
     padding-left: 25px;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .sparc-synergies-timeline-content li::before {
