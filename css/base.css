@@ -191,7 +191,7 @@ header img:hover {
 }
 
 nav ul {
-    padding: 10px 40px;
+    padding: 10px 100px;
     display: flex;
     flex-direction: row;
     justify-content: right;
@@ -293,7 +293,7 @@ footer img:hover {
 }
 
 .social-media svg {
-    width: clamp(20px, 3vw, 30px);
+    width: clamp(20px, 5vw, 55px);
     height: auto;
 }
 
@@ -303,13 +303,13 @@ footer img:hover {
 }
 
 .contact-div h3 {
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     color: #484848;
 }
 
 .contact-div p {
-    font-size: clamp(.7rem, 2vw, 1rem);
+    font-size: clamp(.7rem, 2vw, 1.1rem);
     color: #484848;
     margin-top: 5px;
 }

@@ -58,6 +58,7 @@ p {
 
 .hero-content div p,
 .about-text p {
+    text-indent: 45px;
     text-align: justify;
 }
 
@@ -154,8 +155,14 @@ p {
 
 
 .about-section {
-    padding: 0px 100px;
+    padding: 0px 200px;
     position: relative;
+}
+
+@media (max-width: 1024px) {
+    .about-section {
+        padding: 0px 100px;
+    }
 }
 
 .about-content {
@@ -184,14 +191,11 @@ p {
 
 .about-content h2 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
     color: #00adb5;
     max-width: 600px;
 }
 
 .about-content {
-    flex: 1;
-    padding: 20px;
     margin-bottom: 40px;
 }
 
@@ -783,6 +787,12 @@ ul li {
     color: white;
 }
 
+.sparc-policy-action-link {
+    width: 200px;
+    height: auto;
+    font-size: 1.1rem;
+}
+
 .sparc-policy-flip-card-back .sparc-policy-action-link:hover {
     background-color: #1d274a;
     color: white;
@@ -1117,6 +1127,7 @@ ul li {
     .about-content {
         flex-direction: column;
         gap: 20px;
+        padding: 0px 100px;
     }
 
     .objective-section {
