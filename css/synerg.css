@@ -221,6 +221,8 @@ h1 {
 .sparc-synergies-national-section li {
     position: relative;
     padding-left: 25px;
+    display: flex;
+    align-items: center;
     margin-bottom: 12px;
     font-size: 1.1rem;
     color: var(--text-dark);
