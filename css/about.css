@@ -25,6 +25,11 @@ body {
     overflow-x: hidden;
 }
 
+li {
+    display: flex;
+    align-items: center;
+}
+
 .sparc-about-main-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -292,6 +297,8 @@ h1 {
     position: relative;
     padding-left: 25px;
     margin-bottom: 12px;
+    display: flex;
+    align-items: center;
     font-size: 1rem;
     color: var(--text-dark);
 }
@@ -730,6 +737,7 @@ tr:hover {
 .governance-list li {
     position: relative;
     padding-left: 25px;
+    
     margin-bottom: 15px;
     font-size: 1.1rem;
 }

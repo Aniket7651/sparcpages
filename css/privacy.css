@@ -1,0 +1,122 @@
+.sparc-privacy-main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    max-width: 1000px;
+    padding: 0px 50px;
+    margin: 0 auto;
+}
+
+.sparc-privacy-header-section {
+    text-align: center;
+    background: none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0 40px;
+}
+
+.sparc-privacy-title-element {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00adb5;
+    margin-bottom: 10px;
+}
+
+.sparc-privacy-date-info {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.sparc-privacy-content-section {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.sparc-privacy-subheading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00adb5;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00adb5;
+    padding-bottom: 8px;
+}
+
+.sparc-privacy-paragraph-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.sparc-privacy-list-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.sparc-privacy-list-item {
+    margin-bottom: 10px;
+}
+
+.sparc-privacy-contact-highlight {
+    font-weight: 500;
+}
+
+.sparc-privacy-footer-section {
+    text-align: center;
+    padding: 40px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@keyframes sparc-privacy-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sparc-privacy-content-section {
+    animation: sparc-privacy-fade-up 0.6s ease-out forwards;
+}
+
+.sparc-privacy-content-section:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.sparc-privacy-content-section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.sparc-privacy-content-section:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sparc-privacy-title-element {
+        font-size: 2rem;
+    }
+
+    .sparc-privacy-main-wrapper {
+        padding: 15px;
+    }
+
+    .sparc-privacy-content-section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .sparc-privacy-subheading {
+        font-size: 1.3rem;
+    }
+}
