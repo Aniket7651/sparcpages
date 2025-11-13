@@ -130,12 +130,6 @@ h1 {
     position: relative;
 }
 
-.sparc-tab-content h2::before {
-    content: '';
-    margin-right: 12px;
-    font-size: 1.2em;
-}
-
 .sparc-tab-content ul {
     list-style: none;
     padding-left: 0;
@@ -144,7 +138,7 @@ h1 {
 .sparc-tab-content li {
     position: relative;
     padding-left: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 1.1rem;
 }
 
@@ -159,9 +153,8 @@ h1 {
 }
 
 .sparc-tab-content p {
-    margin-top: 20px;
     font-size: 1.1rem;
-    line-height: 1.8;
+    margin-bottom: 10px;
 }
 
 @keyframes fadeInDown {
