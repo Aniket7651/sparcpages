@@ -78,7 +78,7 @@ p {
 
 .glance-section {
     color: #ffffff;
-    padding: 40px 20px;
+    padding: 0px 20px;
     text-align: center;
     position: relative;
 }
@@ -136,7 +136,7 @@ p {
     position: relative;
     background-color: #ffffff;
     color: #1d274a;
-    margin: 50px auto;
+    margin: 40px auto;
     padding: 40px 20px;
     width: 80%;
     max-width: 800px;
@@ -154,7 +154,7 @@ p {
 
 
 .about-section {
-    padding: 50px 100px;
+    padding: 0px 100px;
     position: relative;
 }
 
