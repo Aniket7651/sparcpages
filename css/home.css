@@ -157,11 +157,15 @@ p {
 .about-section {
     padding: 0px 200px;
     position: relative;
+    padding-left: 10px;
+    width: 100%;
 }
 
 @media (max-width: 1024px) {
     .about-section {
         padding: 0px 100px;
+        padding-left: 10px;
+        width: 1020px;
     }
 }
 
@@ -224,6 +228,19 @@ p {
     box-sizing: border-box;
 }
 
+@media (max-width: 1440px) {
+    .objective-section {
+        width: 1420px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .objective-section {
+        width: 1000px;
+    }
+    
+}
+
 .objective-section h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -238,7 +255,6 @@ p {
 .objective-cards {
     display: flex;
     gap: 18px;
-    padding: 20px 0;
     width: 100%;
     margin-left: 0;
     flex-wrap: wrap;
@@ -1122,6 +1138,7 @@ ul li {
 
     .about-section {
         padding: 10px 0;
+        width: 100%;
     }
 
     .about-content {
@@ -1132,6 +1149,7 @@ ul li {
 
     .objective-section {
         padding: 20px 10px;
+        width: 100%;
     }
 
     .objective-cards {
