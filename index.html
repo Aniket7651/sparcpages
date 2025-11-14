@@ -269,6 +269,7 @@
 <style>
     .sparc-objectives-main-section {
         position: relative;
+        display: inline-block;
         width: 100%;
         box-sizing: border-box;
         text-align: left;
@@ -281,9 +282,16 @@
         padding-left: 100px;
     }
 
+    @media (max-width: 768px) {
+        .sparc-objectives-container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }        
+    }
+
     .sparc-objectives-header {
         text-align: left;
-        margin-bottom: 60px;
+        margin-bottom: 20px;
     }
 
     .sparc-objectives-title {
@@ -291,7 +299,6 @@
         font-weight: 700;
         color: #00adb5;
         margin-bottom: 20px;
-        padding-left: 260px;
         text-align: left;
         animation: fadeInDown 1s ease-out;
     }
@@ -302,7 +309,6 @@
         font-size: 1.1rem;
         color: #484848;
         max-width: 800px;
-        margin: 0 auto;
         text-align: left;
         animation: fadeInUp 1s ease-out 0.3s both;
     }
@@ -404,22 +410,6 @@
         .sparc-objectives-description { font-size: 1.1rem; }
         .sparc-objective-card { padding: 20px; }
         .sparc-objective-card-text { font-size: 0.95rem; }
-    }
-
-    @media (max-width: 1441px) {
-        .sparc-objectives-title {   
-            padding-left: 24%;
-        }
-        .sparc-objectives-description {
-            padding-left: 10%;
-        }
-    }
-
-
-    @media (max-width: 1024px) {
-        .sparc-objectives-title, .sparc-objectives-description {
-            padding-left: 17.5%;
-        }
     }
 </style>
 
