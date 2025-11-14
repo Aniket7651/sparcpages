@@ -306,12 +306,13 @@ footer img:hover {
     margin-top: 10px;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
     color: #484848;
+    margin-bottom: 10px;
 }
 
 .contact-div p {
     font-size: clamp(.7rem, 2vw, 1.1rem);
     color: #484848;
-    margin-top: 5px;
+    line-height: 20px;
 }
 
 .footer-links a {

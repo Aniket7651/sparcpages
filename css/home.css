@@ -1127,7 +1127,7 @@ ul li {
     .about-content {
         flex-direction: column;
         gap: 20px;
-        padding: 0px 100px;
+        padding: 0px 20px;
     }
 
     .objective-section {
