@@ -58,8 +58,8 @@ p {
 
 .hero-content div p,
 .about-text p {
-    text-indent: 45px;
     text-align: justify;
+    margin-bottom: 10px;
 }
 
 .hero-image {
@@ -226,6 +226,11 @@ p {
     position: relative;
     width: 100%;
     box-sizing: border-box;
+    overflow: visible !important;
+    pointer-events: auto !important;
+    z-index: 1 !important;
+    height: auto !important;
+    touch-action: pan-y; /* Allow vertical scroll on touch devices */
 }
 
 @media (max-width: 1440px) {
@@ -258,6 +263,13 @@ p {
     width: 100%;
     margin-left: 0;
     flex-wrap: wrap;
+    overflow: visible !important;
+    pointer-events: auto !important;
+    z-index: auto !important;
+    scroll-behavior: smooth;
+    position: relative !important;
+    height: auto !important;
+    touch-action: pan-y !important; /* Enable vertical touch scrolling */
 }
 
 .obj-card {
@@ -265,7 +277,7 @@ p {
     color: #00adb5;
     flex: 1 1 calc(16.666% - 15px);
     min-width: 220px;
-    height: auto;
+    height: auto !important; /* Ensure height doesn't overflow */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -274,7 +286,11 @@ p {
     justify-content: flex-start;
     font-size: 10px;
     padding: 18px;
-    cursor: pointer;
+    position: relative !important; /* Not fixed or absolute */
+    overflow: visible !important; /* Allow content to scroll if needed */
+    pointer-events: auto !important;
+    z-index: auto !important;
+    touch-action: manipulation; /* Allow touch interactions but enable scroll */
 }
 
 .obj-card:hover {
@@ -295,9 +311,6 @@ p {
 
 }
 
-.obj-card:not(:hover) {
-    opacity: 1;
-}
 
 
 .consortium {
@@ -1015,7 +1028,6 @@ ul li {
 .sparc-result-content-list {
     list-style: none;
     padding-left: 0;
-    margin-bottom: 8px;
     text-align: left;
     
     /* Removed max-height and overflow-y to avoid scrollbars */

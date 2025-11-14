@@ -434,6 +434,63 @@
     </section>
 
 
+    
+<!-- Fixed Cookie Consent Pop-up Banner - Enhanced Size & Positioning - Add this just before closing </body> tag -->
+<div id="sparc-cookie-popup" class="sparc-cookie-popup-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); z-index: 10000; font-family: 'Inter', sans-serif; color: #484848;">
+    <div class="sparc-cookie-popup-modal" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(15px); border-radius: 16px; padding: 40px; max-width: 600px; max-height: 85vh; overflow-y: auto; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); min-width: 400px;">
+        <h3 class="sparc-cookie-popup-title" style="font-size: 1.6rem; color: #00adb5; margin-bottom: 20px; font-weight: 600; text-align: center;">Cookie Policy</h3>
+        <p class="sparc-cookie-popup-desc" style="font-size: 1rem; line-height: 1.6; margin-bottom: 25px; text-align: left;">This website uses cookies for basic functionality, analytics, preferences, and embedded media. Strictly necessary cookies are always enabled. Others require your consent. See our <a href="/cookies" style="color: #00adb5; text-decoration: none; font-weight: 500;">full Cookie Policy</a>.</p>
+        
+        <div class="sparc-cookie-categories" style="margin-bottom: 30px;">
+            <label class="sparc-cookie-category-item" style="display: block; margin-bottom: 15px; font-size: 1rem;">
+                <input type="checkbox" id="sparc-cookie-analytics" checked style="margin-right: 10px; transform: scale(1.1);"> Analytics cookies (measure traffic and improve content)
+            </label>
+            <label class="sparc-cookie-category-item" style="display: block; margin-bottom: 15px; font-size: 1rem;">
+                <input type="checkbox" id="sparc-cookie-preferences" checked style="margin-right: 10px; transform: scale(1.1);"> Preference cookies (remember language/layout)
+            </label>
+            <label class="sparc-cookie-category-item" style="display: block; margin-bottom: 15px; font-size: 1rem;">
+                <input type="checkbox" id="sparc-cookie-embedded" checked style="margin-right: 10px; transform: scale(1.1);"> Embedded media / social cookies (YouTube, social embeds)
+            </label>
+        </div>
+        
+        <div class="sparc-cookie-buttons" style="text-align: right;">
+            <button onclick="sparcRejectNonEssential()" style="background: transparent; color: #00adb5; border: 1px solid #00adb5; padding: 12px 24px; border-radius: 8px; margin-right: 12px; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 1rem; transition: all 0.3s ease;">Reject Non-Essential</button>
+            <button onclick="sparcAcceptAllCookies()" style="background: #00adb5; color: white; border: none; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 1rem; transition: all 0.3s ease;">Accept All</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function sparcCheckCookieConsent() {
+        const consent = localStorage.getItem('sparc-cookie-consent');
+        const popup = document.getElementById('sparc-cookie-popup');
+        if (!consent) {
+            popup.style.display = 'block';
+        }
+    }
+
+    function sparcAcceptAllCookies() {
+        localStorage.setItem('sparc-cookie-consent', JSON.stringify({
+            analytics: true,
+            preferences: true,
+            embedded: true
+        }));
+        document.getElementById('sparc-cookie-popup').style.display = 'none';
+    }
+
+    function sparcRejectNonEssential() {
+        localStorage.setItem('sparc-cookie-consent', JSON.stringify({
+            analytics: false,
+            preferences: false,
+            embedded: false
+        }));
+        document.getElementById('sparc-cookie-popup').style.display = 'none';
+    }
+
+    // Check on page load
+    window.addEventListener('load', sparcCheckCookieConsent);
+</script>
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <footer>
