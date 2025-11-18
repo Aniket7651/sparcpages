@@ -1,0 +1,162 @@
+.sparc-kickoff-main-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sparc-kickoff-header-section {
+    text-align: center;
+    display: block;
+    box-shadow: none;
+    background: none;
+    padding: 60px 0 0px;
+}
+
+.sparc-kickoff-title-element {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00adb5;
+    margin-bottom: 10px;
+}
+
+.sparc-kickoff-location-date {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.sparc-kickoff-content-section {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.sparc-kickoff-subheading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00adb5;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00adb5;
+    padding-bottom: 8px;
+}
+
+.sparc-kickoff-paragraph-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.sparc-kickoff-list-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.sparc-kickoff-list-item {
+    margin-bottom: 10px;
+}
+
+.sparc-kickoff-link-button {
+    display: inline-block;
+    background: #00adb5;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    margin: 15px 0;
+    transition: background 0.3s ease;
+}
+
+.sparc-kickoff-link-button:hover {
+    background: #009da8;
+}
+
+.sparc-kickoff-teleconference-section {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.sparc-kickoff-tele-link {
+    display: block;
+    background: #00adb5;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.sparc-kickoff-tele-link:hover {
+    background: #009da8;
+}
+
+.sparc-kickoff-footer-section {
+    text-align: center;
+    padding: 40px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@keyframes sparc-kickoff-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sparc-kickoff-content-section,
+.sparc-kickoff-teleconference-section {
+    animation: sparc-kickoff-fade-up 0.6s ease-out forwards;
+}
+
+.sparc-kickoff-content-section:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.sparc-kickoff-content-section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sparc-kickoff-title-element {
+        font-size: 2rem;
+    }
+
+    .sparc-kickoff-main-wrapper {
+        padding: 15px;
+    }
+
+    .sparc-kickoff-content-section,
+    .sparc-kickoff-teleconference-section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .sparc-kickoff-subheading {
+        font-size: 1.3rem;
+    }
+
+    .sparc-kickoff-link-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sparc-kickoff-tele-link {
+        width: 100%;
+    }
+}
