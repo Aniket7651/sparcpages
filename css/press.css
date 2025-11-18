@@ -1,0 +1,140 @@
+.sparc-press-main-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sparc-press-header-section {
+    text-align: center;
+    display: block;
+    background: none;
+    box-shadow: none;
+    padding: 60px 0 40px;
+}
+
+.sparc-press-title-element {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00adb5;
+    margin-bottom: 10px;
+}
+
+.sparc-press-location-date {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.sparc-press-content-section {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.sparc-press-subheading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00adb5;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00adb5;
+    padding-bottom: 8px;
+}
+
+.sparc-press-paragraph-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.sparc-press-list-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.sparc-press-list-item {
+    margin-bottom: 10px;
+}
+
+.sparc-press-italic-text {
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-top: 10px;
+}
+
+.sparc-press-footer-section {
+    text-align: center;
+    padding: 40px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@keyframes sparc-press-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sparc-press-content-section {
+    animation: sparc-press-fade-up 0.6s ease-out forwards;
+}
+
+.sparc-press-content-section:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.sparc-press-content-section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.sparc-press-content-section:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sparc-press-title-element {
+        font-size: 2rem;
+    }
+
+    .sparc-press-main-wrapper {
+        padding: 15px;
+    }
+
+    .sparc-press-content-section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .sparc-press-subheading {
+        font-size: 1.3rem;
+    }
+
+    .sparc-press-paragraph-text {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sparc-press-title-element {
+        font-size: 1.8rem;
+    }
+
+    .sparc-press-location-date {
+        font-size: 0.9rem;
+    }
+
+    .sparc-press-content-section {
+        padding: 15px;
+    }
+
+    .sparc-press-subheading {
+        font-size: 1.2rem;
+    }
+}
