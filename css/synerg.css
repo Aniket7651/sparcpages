@@ -306,6 +306,27 @@ p, ul li {
     font-size: 1rem; /* Unified font size for paragraphs and list items */
 }
 
+.learn-more-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.learn-more-link a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.learn-more-link a:hover {
+    background-color: #007f83;
+    color: #e0f7f8;
+}
+
 @keyframes slideInDown {
     from {
         opacity: 0;
@@ -602,3 +623,5 @@ p, ul li {
         font-size: 0.9em;
     }
 }
+
+

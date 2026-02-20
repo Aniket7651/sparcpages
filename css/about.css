@@ -920,3 +920,27 @@ tr:hover {
         padding: 25px 15px;
     }
 }
+
+.sparc-about-list {
+    list-style: disc;
+    padding-left: 0;
+    margin-left: 20px;
+
+}
+
+.sparc-about-list li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.sparc-about-join-button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
