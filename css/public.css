@@ -157,6 +157,34 @@ h1 {
     margin-bottom: 10px;
 }
 
+.sparc-outputs-content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.sparc-outputs-content h2 p {
+    font-size: 0.8rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    font-weight: 400;
+}
+
+.btn-external-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
 .publication-highlight {
     background: #f0f4f7;
     padding: 20px;
