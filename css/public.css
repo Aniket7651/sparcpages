@@ -162,9 +162,16 @@ h1 {
     flex-direction: column;
     gap: 30px;
     background: var(--card-bg);
-    padding: 40px;
+    padding: 0;
     max-width: 1000px;
     border-radius: 20px;
+}
+
+.sparc-outputs-container h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    text-align: left;
 }
 
 .sparc-outputs-content h2 p {
@@ -346,5 +353,9 @@ h1 {
 
     .sparc-tab-content h2 {
         font-size: 1.5rem;
+    }
+
+    .sparc-outputs-container a h2 {
+        line-height: 1.2;
     }
 }
