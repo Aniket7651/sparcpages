@@ -163,6 +163,7 @@ h1 {
     gap: 30px;
     background: var(--card-bg);
     padding: 40px;
+    max-width: 1000px;
     border-radius: 20px;
 }
 
@@ -265,6 +266,18 @@ h1 {
 @media (max-width: 768px) {
     .sparc-outputs-container {
         padding: 0 15px;
+        margin: 0;
+    }
+
+    .sparc-outputs-container h2 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .btn-external-link {
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px 15px;
     }
 
     .sparc-outputs-header {
