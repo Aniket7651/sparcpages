@@ -1,0 +1,850 @@
+/* Container Fixes & Variables */
+.scg-page-wrapper {
+  --primary-color: #00adb5;
+  --secondary-color: #e8f4f4;
+  --text-light: #333;
+  --text-dark: #555;
+  --bg-light: #f9f9f9;
+  --white: #ffffff;
+  --shadow: 0 8px 32px rgba(0, 173, 181, 0.2);
+  --shadow-hover: 0 12px 40px rgba(0, 173, 181, 0.4);
+
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-dark);
+  max-width: 1200px;
+  margin: 0 auto;
+
+  width: calc(100% - 40px);
+  flex: 1 0 auto;
+  padding: 40px 20px 40px 20px;
+  clear: both;
+  display: block;
+  position: relative;
+  z-index: 0;
+  background: transparent;
+}
+
+/* Animations ki wajah se bhi layout tut sakta hai (Elements upar hawam mein shift hote hain), isko fix karne ke liye: */
+.scg-animate-up {
+  animation: scgFadeUp 0.8s ease forwards;
+  animation-fill-mode: forwards;
+  display: block;
+  /* Ensures they take up space before animation */
+}
+
+.scg-page-wrapper p {
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+
+.scg-shutter-container {
+  margin-bottom: 70px;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.scg-shutter-container:hover {
+  transform: translateY(-3px);
+}
+
+.scg-shutter-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  background-color: var(--secondary-color, #e8f4f4);
+  border-radius: 0 0 16px 16px;
+  margin-top: -20px;
+  padding: 0 30px;
+  box-shadow: var(--shadow, 0 8px 32px rgba(0, 173, 181, 0.2));
+}
+
+.scg-shutter-inner {
+  padding: 40px 0 20px 0;
+  color: var(--text-dark, #555);
+  transform: translateY(-20px);
+  /* Content thoda upar shift rahega */
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Girne ka smooth effect */
+}
+
+.heading-6-head {
+  margin-top: 10px;
+  color: var(--primary-color, #00adb5);
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+/* Jab section par click hoga aur active class lagegi, tab sutter khulega */
+.scg-shutter-container.active .scg-shutter-panel {
+  max-height: fit-content;
+  padding: 0 30px;
+}
+
+.heading-6 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 48;
+  color: var(--primary-color);
+  margin-bottom: 0;
+}
+
+/* Animations */
+@keyframes scgFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Headings */
+.scg-section-title {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.scg-section-title::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background: var(--primary-color);
+  bottom: -8px;
+  left: 0;
+  border-radius: 2px;
+}
+
+.scg-section {
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.scg-section-no-margin {
+  margin-bottom: 0;
+  position: relative;
+}
+
+/* Hero Section with Shapes */
+.scg-hero-section {
+  position: relative;
+  padding: 40px;
+  background: var(--secondary-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.scg-shape-bg {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: var(--primary-color);
+  opacity: 0.1;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.scg-content-box {
+  position: relative;
+  z-index: 2;
+}
+
+.scg-content-box h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.scg-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+/* Grids */
+.scg-grid-2-objective {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.scg-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.scg-grid-2-objective-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .scg-grid-2-objective {
+    grid-template-columns: 1fr;
+  }
+
+  .scg-grid-2-objective-2 {
+    grid-template-columns: 1fr;
+  }
+  .scg-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+.popup-list-ft li {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.scroll-on {
+  overflow-y: auto;
+  max-height: 400px;
+  padding-right: 10px;
+  /* Scrollbar ke liye space */
+  scrollbar-width: thin;
+  scrollbar-color: #d6d6d6 transparent;
+}
+
+.text-white {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 48;
+  color: var(--white);
+  margin-bottom: 0;
+
+}
+
+
+/* Modern Cards */
+.scg-card,
+.scg-feature-box {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid var(--secondary-color);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.scg-card:hover,
+.scg-feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.scg-card-icon {
+  font-size: 2rem;
+  text-align: right;
+}
+
+.scg-card-icon-header-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .scg-card-icon-header-box {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.scg-card h4,
+.scg-feature-box h4 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.scg-card p,
+.scg-feature-box p {
+  color: var(--text-dark);
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.scg-card-icon-img {
+  width: clamp(60px, 9vw, 110px);
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.scg-card-icon-img-logo {
+  width: clamp(40px, 5vw, 90px);
+  height: auto;
+  transition: transform 0.3s ease;
+  padding: 5px;
+}
+
+/* Timeline/Architecture Cards */
+.scg-timeline-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.scg-t-card {
+  flex: 1 1 300px;
+  background: var(--bg-light);
+  padding: 30px;
+  border-radius: 12px;
+  border-top: 5px solid var(--primary-color);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.scg-t-card:hover {
+  transform: scale(1.03);
+}
+
+.scg-highlight-card {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.scg-highlight-card p,
+.scg-highlight-card h4 {
+  color: var(--white);
+}
+
+.scg-level-badge {
+  display: inline-block;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+/* Info Banner */
+.scg-info-banner {
+  background: linear-gradient(135deg, var(--primary-color), #007c82);
+  padding: 40px;
+  border-radius: 16px;
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.text-white {
+  color: var(--white) !important;
+}
+
+.scg-list {
+  margin-left: 20px;
+  color: var(--white);
+}
+
+.scg-list li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Profile Cards */
+.scg-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.scg-profile-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.scg-profile-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.scg-profile-header {
+  background: var(--secondary-color);
+  padding: 20px;
+  border-radius: 12px 12px 0 0;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.scg-profile-header h5 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+.scg-tag {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.scg-profile-body {
+  padding: 20px;
+}
+
+.scg-org {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.scg-bio {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+/* Buttons */
+.scg-btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.scg-links-btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .scg-links-btns {
+    flex-direction: column;
+  }
+}
+
+.external-link {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  justify-content: center;
+  gap: 5px;
+}
+
+.scg-btn:hover {
+  background: var(--text-light);
+  transform: translateY(-3px);
+}
+
+.scg-links-box {
+  background: var(--secondary-color);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+/* Keep the page footer below the page content on this page only. */
+body>footer {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .scg-hero-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .scg-page-wrapper {
+    width: 100%;
+    padding: 20px 10px 40px 10px;
+  }
+}
+
+.font-small {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+
+.scg-modal-trigger {
+  cursor: pointer;
+}
+
+/* Pop-up ka dark background */
+.scg-modal-overlay {
+  display: none;
+  /* By default chhupa rahega */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Black transperent bg */
+  z-index: 9999;
+  /* Sabse upar dikhane ke liye */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Jab pop-up active ho tab use dikhane ke liye class */
+.scg-modal-overlay.active {
+  display: flex;
+}
+
+/* Pop-up ka main white box */
+.scg-modal-content {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s ease;
+}
+
+/* Close icon ka design */
+.scg-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #777;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.scg-modal-close:hover {
+  color: #d9534f;
+  /* Hover par red colour */
+}
+
+/* Halka sa aane wala animation */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+[data-title] {
+  position: relative;
+  /* Required for positioning the tooltip */
+}
+
+[data-title]::after {
+  content: attr(data-title);
+  /* Fetches the value of data-title */
+  position: absolute;
+  top: -30px;
+  /* Adjusts tooltip position */
+  left: 50%;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background: var(--white, #ffffff);
+  color: var(--primary-color, #00adb5);
+  padding: 10px;
+  border-radius: 25px;
+  opacity: 0;
+  /* Initially hidden */
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+[data-title]:hover::after {
+  opacity: 1;
+  /* Show tooltip on hover */
+  visibility: visible;
+}
+
+
+
+
+
+/* Timeline Wrapper - Protects other sections */
+.scg-tl-wrapper {
+  padding: 20px;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  clear: both;
+}
+
+.scg-tl-main-heading {
+  text-align: center;
+  color: var(--primary-color, #00adb5);
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+}
+
+/* The actual timeline container */
+.scg-tl-container {
+  position: relative;
+  width: 100%;
+}
+
+/* The vertical line in the middle */
+.scg-tl-container::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: var(--secondary-color, #e8f4f4);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  /* Centers the line */
+  border-radius: 4px;
+  z-index: -1;
+}
+
+/* Individual timeline item container */
+.scg-tl-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+/* Left item position */
+.scg-tl-item.left {
+  left: 0;
+}
+
+/* Right item position */
+.scg-tl-item.right {
+  left: 50%;
+}
+
+/* Timeline Circles (Icons) */
+.scg-tl-icon {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  background-color: var(--white, #ffffff);
+  border: 4px solid var(--primary-color, #00adb5);
+  border-radius: 50%;
+  top: 20px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Position icon for left side */
+.scg-tl-item.left .scg-tl-icon {
+  right: -22px;
+}
+
+/* Position icon for right side */
+.scg-tl-item.right .scg-tl-icon {
+  left: -22px;
+}
+
+/* The Box Content */
+.scg-tl-content {
+  padding: 25px 30px;
+  background-color: var(--white, #ffffff);
+  position: relative;
+  border-radius: 8px;
+  box-shadow: var(--shadow, 0 8px 32px rgba(0, 173, 181, 0.2));
+  border: 1px solid var(--secondary-color, #e8f4f4);
+  transition: transform 0.3s ease;
+}
+
+.scg-tl-content:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover, 0 12px 40px rgba(0, 173, 181, 0.4));
+  border-color: var(--primary-color, #00adb5);
+}
+
+.scg-tl-content h4 {
+  color: var(--primary-color, #00adb5);
+  margin-top: 0;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.scg-tl-content p {
+  color: var(--text-dark, #555);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.scg-tl-date {
+  top: 25px;
+  right: 30px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #777;
+}
+
+/* Right side content needs the date on the left */
+.scg-tl-item.right .scg-tl-date {
+  right: auto;
+  left: 30px;
+}
+
+/* The Triangle Arrows pointing to the line */
+.scg-tl-content::before {
+  content: " ";
+  position: absolute;
+  top: 28px;
+  width: 0;
+  height: 0;
+  border: medium solid var(--white, #ffffff);
+}
+
+/* Left item arrow pointing right */
+.scg-tl-item.left .scg-tl-content::before {
+  right: -14px;
+  border-width: 14px 0 14px 14px;
+  border-color: transparent transparent transparent var(--white, #ffffff);
+}
+
+/* Right item arrow pointing left */
+.scg-tl-item.right .scg-tl-content::before {
+  left: -14px;
+  border-width: 14px 14px 14px 0;
+  border-color: transparent var(--white, #ffffff) transparent transparent;
+}
+
+
+/* ======================================= */
+/* RESPONSIVE DESIGN FOR MOBILE            */
+/* ======================================= */
+@media screen and (max-width: 768px) {
+  .scg-page-wrapper {
+    font-size: 16px;
+  }
+
+  .scg-page-wrapper p,
+  .scg-page-wrapper li,
+  .scg-page-wrapper .font-small,
+  .scg-page-wrapper .scg-subtitle,
+  .scg-page-wrapper .scg-t-card p,
+  .scg-page-wrapper .scg-card p,
+  .scg-page-wrapper .scg-feature-box p,
+  .scg-page-wrapper .scg-profile-body p,
+  .scg-page-wrapper .scg-tl-content p {
+    font-size: 16px;
+  }
+
+  .scg-page-wrapper h2 {
+    font-size: 28px;
+  }
+
+  .scg-page-wrapper h3 {
+    font-size: 24px;
+  }
+
+  .scg-page-wrapper h4,
+  .scg-page-wrapper .heading-6-head,
+  .scg-page-wrapper .heading-6 {
+    font-size: 18px;
+  }
+
+  /* Move the vertical line to the left */
+  .scg-tl-container::after {
+    left: 20px;
+  }
+
+  /* Make both left and right items take full width */
+  .scg-tl-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 15px;
+  }
+
+  /* Reset left properties */
+  .scg-tl-item.left,
+  .scg-tl-item.right {
+    left: 0;
+  }
+
+  /* Put icons on the left side for all items */
+  .scg-tl-item.left .scg-tl-icon,
+  .scg-tl-item.right .scg-tl-icon {
+    left: -2px;
+  }
+
+  /* Put all arrows on the left, pointing left */
+  .scg-tl-item.left .scg-tl-content::before,
+  .scg-tl-item.right .scg-tl-content::before {
+    left: -14px;
+    right: auto;
+    border-width: 14px 14px 14px 0;
+    border-color: transparent var(--white, #ffffff) transparent transparent;
+  }
+
+  /* Reset Date Position for mobile */
+  .scg-tl-item.left .scg-tl-date,
+  .scg-tl-item.right .scg-tl-date {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.font-large {
+  font-size: 2.8rem;
+}
+
+@media (max-width: 768px) {
+  .font-large {
+    font-size: 1.2rem;
+  }
+}
