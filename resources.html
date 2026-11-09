@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPARC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/base.css?v=1.1">
+    <link rel="icon" href="imgs/sparcSign-transparent.png" type="image/x-icon">
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+        data-cf-beacon='{"token": "9d5d4af059e24347942005f453c8cddc"}'></script><!-- End Cloudflare Web Analytics -->
+</head>
+
+<body>
+    <div class="scroll-to-top">↑</div>
+
+    <header style="color: #fff;">
+        <div class="mobile-menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <img src="imgs/Sparc_logo_positive_color_tagline_RGB.png" alt="SPARC Logo">
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="dropdown-button no-underline">Home</a></li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-button">About SPARC</button>
+                        <div class="dropdown-content">
+                            <a href="#about">Overview</a>
+                            <a href="#objective">Objectives & Approach</a>
+                            <a href="#">Project Structure & Work Packages</a>
+                            <a href="#consort">Consortium Partners</a>
+                            <a href="sciBoard.html">Scientific Board</a>
+                            <a href="stakeholder.html">Stakeholder Coordination Group</a>
+                            <a href="">SPARC Resources</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Pilots</button>
+                        <div class="dropdown-content">
+                            <a href="index.html#pilot">Cancer Pilots Overview</a>
+                            <a href="index.html#pilot">Results & Insights</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Training & Engagement</button>
+                        <div class="dropdown-content">
+                            <a href="index.html#training">Training for Health Professionals</a>
+                            <a href="index.html#training">Training for Patients</a>
+                            <a href="index.html#training">Engagement & Twinning</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Policy & Impact</button>
+                        <div class="dropdown-content">
+                            <a href="index.html#impact">EU & National Alignment</a>
+                            <a href="index.html#impact">Equity & Sustainability</a>
+                            <a href="index.html#impact">Impact Dashboard</a>
+                            <a href="index.html#impact">Synergies</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Results</button>
+                        <div class="dropdown-content">
+                            <a href="index.html#result">Deliverables & Publications</a>
+                            <a href="index.html#result">Data Architecture & Tools</a>
+                            <a href="index.html#result">Pilot Results & Insights</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-button">News</button>
+                        <div class="dropdown-content">
+                            <a href="newsletter.html">Newsroom</a>
+                            <a href="news.html">Events & Conferences</a>
+                            <a href="#">Gallery</a>
+                            <a href="press.html">Press Releases</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropdown-button">Contact</button>
+                        <div class="dropdown-content">
+                            <a href="#contact">Contact Us</a>
+                            <a href="#">Funding & Credits</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <link rel="stylesheet" href="css/home.css?v=1.1">
+    <link rel="stylesheet" href="css/home2.css?v=1.1">
+    <link rel="stylesheet" href="css/stakholder.css?v=1.1">
+
+    <div class="scg-page-wrapper">
+
+        <section class="scg-section">
+            <h3 class="scg-section-title">Downloadable Resources</h3>
+            <p>Explore the resources developed throughout the SPARC project, bringing together
+                communication and dissemination materials produced by partners across the consortium.</p>
+            <p>From informative leaflets and project brochures to posters, infographics and other
+                communication materials, this collection offers an accessible overview of SPARC’s activities,
+                objectives and key areas of work.</p>
+            <p>All materials are available to view and download, supporting the wider exchange of knowledge
+                and helping raise awareness of personalised cancer medicine</p>
+
+
+            <div id="scg-pdf-gallery" class="scg-gallery-grid"></div>
+
+            <!-- ========================================== -->
+            <!-- PDF Viewer Modal (Popup) -->
+            <div id="scg-pdf-modal" class="scg-modal-overlay">
+                <div class="scg-pdf-modal-content">
+                    <div class="scg-pdf-modal-header">
+                        <h3 id="scg-pdf-title">Document Title</h3>
+                        <span class="scg-modal-close" id="scg-pdf-close">&times;</span>
+                    </div>
+
+                    <!-- Stats Buttons -->
+                    <div class="scg-pdf-actions">
+                        <div class="scg-pdf-stats">
+                            <p id="scg-pdf-description" class="font-small"></p>
+                        </div>
+                        <a href="#" id="scg-pdf-download-btn" class="scg-btn-resource" download>
+                            Download
+                        </a>
+                    </div>
+
+                    <!-- PDF Preview Area -->
+                    <div class="scg-pdf-preview-container">
+                        <iframe id="scg-pdf-iframe" src="" width="100%" height="500px" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="js/resources.js?v=1.1"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <footer>
+        <div class="social-media">
+
+            <a href="https://x.com/sparc_eu_?s=21">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                </svg></a>
+            <a href="https://www.linkedin.com/company/sparc-eu/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                </svg></a>
+
+        </div>
+        <div class="footer-content">
+            <div class="contact-div" id="contact">
+                <h3>Contact Us</h3>
+
+                <span>
+                    <p>For general inquiries and project coordination:</p>
+                    <p>Manuel Ottaviano</p>
+                    <p>Project Coordinator, Universidad Politécnica de Madrid (UPM)</p>
+                    <p><a href="malto:manuel.ottaviano@upm.es" class="mail-link">manuel.ottaviano@upm.es</a></p>
+                    <br>
+                    <p>For media and policy outreach:</p>
+                    <p>Denis Horgan</p>
+                    <p>Executive Director, European Alliance for Personalised Medicine (EAPM)</p>
+                    <p><a href="mailto:denishorgan@euapm.eu" class="mail-link">denishorgan@euapm.eu</a></p>
+                </span>
+            </div>
+            <br>
+            <div class="footer-links">
+                <a href="impactdashboard.html">Policy & Impact</a>
+                <a href="legal.html">Legal Notice</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+        <img src="imgs/Sparc_logo_positive_color_tagline_RGB.png" alt="SPARC Logo">
+
+        <div class="funding-disclaimer">
+            <p>This project has received funding from the European Union's EU4Health Programme under Grant Agreement No.
+                <strong>101232874</strong>.
+            </p>
+            <p>Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those
+                of the European Union or HaDEA. Neither the European Union nor the granting authority can be held
+                responsible for them.</p>
+            <img src="imgs/Co-fundedEU_POS.jpg">
+        </div>
+        <p>&copy; 2025 SPARC. All rights reserved.</p>
+    </footer>
+
+    <style>
+        .fixed-cross {
+            position: fixed;
+        }
+    </style>
+
+    <script>
+        function toggleMenu() {
+            const menuIcon = document.querySelector('.mobile-menu-icon');
+            const nav = document.querySelector('nav ul');
+
+            menuIcon.classList.toggle('active');
+            menuIcon.classList.toggle('fixed-cross');
+            nav.classList.toggle('show');
+
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const nav = document.querySelector('nav ul');
+            const menuIcon = document.querySelector('.mobile-menu-icon');
+
+            if (!nav.contains(event.target) && !menuIcon.contains(event.target) && nav.classList.contains('show')) {
+                nav.classList.remove('show');
+                menuIcon.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>

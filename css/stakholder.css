@@ -451,6 +451,21 @@
   box-shadow: var(--shadow);
 }
 
+.scg-btn-resource {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+  font-weight: 400;
+  margin-right: 10px;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
 .scg-links-btns {
   display: flex;
   flex-direction: row;
@@ -488,7 +503,7 @@
 body>footer {
   flex-shrink: 0;
   position: relative;
-  z-index: 2;
+  z-index: -1;
 }
 
 @media (max-width: 768px) {
@@ -847,4 +862,124 @@ body>footer {
   .font-large {
     font-size: 1.2rem;
   }
+
+  .scg-tl-content {
+    padding: 20px;
+  }
+
+  .scg-modal-content {
+    padding: 30px;
+  }
+}
+
+.scg-meeting-img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+
+
+/* DOWNLOADABLE RESOURCES PAGE */
+
+/* Gallery Grid */
+.scg-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+  margin: 40px 0;
+}
+
+/* Individual PDF Card */
+.scg-pdf-card {
+  background: var(--white, #fff);
+  border-radius: 12px;
+  box-shadow: var(--shadow, 0 8px 32px rgba(0,0,0,0.1));
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid var(--secondary-color, #e8f4f4);
+}
+
+.scg-pdf-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover, 0 12px 40px rgba(0,0,0,0.2));
+  border-color: var(--primary-color, #00adb5);
+}
+
+.scg-pdf-thumb {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-bottom: 2px solid var(--secondary-color, #e8f4f4);
+}
+
+.scg-pdf-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.scg-pdf-info h4 {
+  margin: 0;
+  color: var(--primary-color, #00adb5);
+  font-size: 1.1rem;
+}
+
+/* Modal Styling specifically for PDF */
+.scg-pdf-modal-content {
+  background-color: #ffffff;
+  padding: 0;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.scg-pdf-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: var(--secondary-color, #e8f4f4);
+  border-bottom: 2px solid var(--primary-color, #00adb5);
+}
+
+.scg-pdf-modal-header h3 {
+  margin: 0;
+  color: var(--primary-color, #00adb5);
+}
+
+#scg-pdf-close {
+  font-size: 30px;
+  cursor: pointer;
+  color: #777;
+}
+#scg-pdf-close:hover { color: #d9534f; }
+
+.scg-pdf-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #f9f9f9;
+}
+
+.scg-pdf-stats span {
+  margin-right: 15px;
+  font-size: 0.95rem;
+  color: #555;
+  background: #eee;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.scg-pdf-preview-container {
+  padding: 20px;
+  flex-grow: 1;
+  background: #e0e0e0;
 }
