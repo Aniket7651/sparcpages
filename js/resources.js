@@ -29,17 +29,18 @@ document.addEventListener('DOMContentLoaded', () => {
     card.className = 'scg-pdf-card';
     card.innerHTML = `
       <img src="docs/${resource.thumbFile}" alt="${resource.title}" class="scg-pdf-thumb" onerror="this.src='https://via.placeholder.com/300x400?text=PDF+Document'">
-      <div class="scg-pdf-info">
-        <h4>${resource.title}</h4>
-      </div>
-    `;
+    
+    `; 
+    // <div class="scg-pdf-info">
+    //    <h4>${resource.title}</h4>
+    // </div>
 
     // 3. CARD PAR CLICK EVENT (Popup kholna)
     card.addEventListener('click', () => {
       // Data set karna
       titleEl.innerText = resource.title;
       descriptionEl.innerText = resource.description; // Assuming you have a description property
-      iframe.src = `docs/${resource.pdfFile}`;
+      iframe.src = `docs/${resource.pdfFile}` + '#toolbar=0&navpanes=0&view=FitH';
       downloadBtn.href = `docs/${resource.pdfFile}`;
       downloadBtn.setAttribute('download', resource.title + ".pdf"); // Download name
 
