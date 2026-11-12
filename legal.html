@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -78,7 +78,7 @@
                     <div class="dropdown">
                         <button class="dropdown-button">Results</button>
                         <div class="dropdown-content">
-                            <a href="index.html#result">Deliverables & Publications</a>
+                            <a href="publication.html">Deliverables & Publications</a>
                             <a href="index.html#result">Data Architecture & Tools</a>
                             <a href="index.html#result">Pilot Results & Insights</a>
                         </div>
@@ -89,8 +89,6 @@
                         <button class="dropdown-button">News</button>
                         <div class="dropdown-content">
                             <a href="newsletter.html">Newsroom</a>
-                            <a href="news.html">Events & Conferences</a>
-                            <a href="#">Gallery</a>
                             <a href="press.html">Press Releases</a>
                         </div>
                     </div>
@@ -164,6 +162,48 @@
             </div>
         </section>
     </div>
+
+    <!-- Advanced Cookie Consent Pop-up Banner -->
+    <div id="sparc-cookie-popup" class="sparc-cookie-popup-overlay"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 10000; font-family: 'Inter', sans-serif; color: #484848;">
+        <div class="sparc-cookie-popup-modal"
+            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 12px; padding: 30px; max-width: 500px; max-height: 80vh; overflow-y: auto; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);">
+            <h3 class="sparc-cookie-popup-title"
+                style="font-size: 1.4rem; color: #00adb5; margin-bottom: 15px; font-weight: 600;">Cookie Policy</h3>
+            <p class="sparc-cookie-popup-desc" style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">This
+                website uses cookies for basic functionality, analytics, preferences, and embedded media. Strictly
+                necessary cookies are always enabled. Others require your consent.</p>
+
+            <div class="sparc-cookie-categories" style="margin-bottom: 25px;">
+                <label class="sparc-cookie-category-item"
+                    style="display: block; margin-bottom: 12px; font-size: 0.9rem;">
+                    <input type="checkbox" id="sparc-cookie-analytics" checked style="margin-right: 8px;"> Analytics
+                    cookies (measure traffic and improve content)
+                </label>
+                <label class="sparc-cookie-category-item"
+                    style="display: block; margin-bottom: 12px; font-size: 0.9rem;">
+                    <input type="checkbox" id="sparc-cookie-preferences" checked style="margin-right: 8px;"> Preference
+                    cookies (remember language/layout)
+                </label>
+                <label class="sparc-cookie-category-item"
+                    style="display: block; margin-bottom: 12px; font-size: 0.9rem;">
+                    <input type="checkbox" id="sparc-cookie-embedded" checked style="margin-right: 8px;"> Embedded media
+                    / social cookies (YouTube, social embeds)
+                </label>
+            </div>
+
+            <div class="sparc-cookie-buttons" style="text-align: right;">
+                <button onclick="sparcRejectNonEssential()"
+                    style="background: transparent; color: #00adb5; border: 1px solid #00adb5; padding: 10px 20px; border-radius: 6px; margin-right: 10px; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.9rem;">Reject
+                    Non-Essential</button>
+                <button onclick="sparcAcceptAllCookies()"
+                    style="background: #00adb5; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.9rem;">Accept
+                    All</button>
+            </div>
+        </div>
+        <script src="js/utils.js"></script>
+    </div>
+    <!-- END OF THE COOKIE POPUP -->
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <footer>

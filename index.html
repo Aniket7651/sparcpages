@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -78,7 +78,7 @@
                     <div class="dropdown">
                         <button class="dropdown-button">Results</button>
                         <div class="dropdown-content">
-                            <a href="#result">Deliverables & Publications</a>
+                            <a href="publication.html">Deliverables & Publications</a>
                             <a href="#result">Data Architecture & Tools</a>
                             <a href="#result">Pilot Results & Insights</a>
                         </div>
@@ -89,8 +89,6 @@
                         <button class="dropdown-button">News</button>
                         <div class="dropdown-content">
                             <a href="newsletter.html">Newsroom</a>
-                            <a href="news.html">Events & Conferences</a>
-                            <a href="#">Gallery</a>
                             <a href="press.html">Press Releases</a>
                         </div>
                     </div>
@@ -893,7 +891,7 @@
     </section>
 
 
-    <!-- Advanced Cookie Consent Pop-up Banner - Add this just before closing </body> tag -->
+    <!-- Advanced Cookie Consent Pop-up Banner -->
     <div id="sparc-cookie-popup" class="sparc-cookie-popup-overlay"
         style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 10000; font-family: 'Inter', sans-serif; color: #484848;">
         <div class="sparc-cookie-popup-modal"
@@ -902,8 +900,7 @@
                 style="font-size: 1.4rem; color: #00adb5; margin-bottom: 15px; font-weight: 600;">Cookie Policy</h3>
             <p class="sparc-cookie-popup-desc" style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">This
                 website uses cookies for basic functionality, analytics, preferences, and embedded media. Strictly
-                necessary cookies are always enabled. Others require your consent. See our <a href="/cookies"
-                    style="color: #00adb5; text-decoration: none;">full Cookie Policy</a>.</p>
+                necessary cookies are always enabled. Others require your consent.</p>
 
             <div class="sparc-cookie-categories" style="margin-bottom: 25px;">
                 <label class="sparc-cookie-category-item"
@@ -932,39 +929,11 @@
                     All</button>
             </div>
         </div>
+        <script src="js/utils.js"></script>
     </div>
+    <!-- END OF THE COOKIE POPUP -->
 
-    <script>
-        function sparcCheckCookieConsent() {
-            const consent = localStorage.getItem('sparc-cookie-consent');
-            const popup = document.getElementById('sparc-cookie-popup');
-            if (!consent) {
-                popup.style.display = 'block';
-            }
-        }
-
-        function sparcAcceptAllCookies() {
-            localStorage.setItem('sparc-cookie-consent', JSON.stringify({
-                analytics: true,
-                preferences: true,
-                embedded: true
-            }));
-            document.getElementById('sparc-cookie-popup').style.display = 'none';
-        }
-
-        function sparcRejectNonEssential() {
-            // Enable only strictly necessary (no storage needed for them)
-            localStorage.setItem('sparc-cookie-consent', JSON.stringify({
-                analytics: false,
-                preferences: false,
-                embedded: false
-            }));
-            document.getElementById('sparc-cookie-popup').style.display = 'none';
-        }
-
-        // Check on page load
-        window.addEventListener('load', sparcCheckCookieConsent);
-    </script>
+    
 
 
 

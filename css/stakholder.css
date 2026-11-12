@@ -899,7 +899,6 @@ body>footer {
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
-  border: 1px solid var(--secondary-color, #e8f4f4);
 }
 
 .scg-pdf-card:hover {
@@ -908,11 +907,26 @@ body>footer {
   border-color: var(--primary-color, #00adb5);
 }
 
-.scg-pdf-thumb {
+.scg-pdf-thumb-wrapper {
   width: 100%;
-  height: 280px;
-  object-fit: cover;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
   border-bottom: 2px solid var(--secondary-color, #e8f4f4);
+  background: #f4f4f4;
+}
+
+.scg-pdf-thumb-canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fit like image */
+  object-position: top center; /* upper side of image */
+}
+
+@media (max-width: 375px) {
+  .scg-pdf-thumb-wrapper {
+    height: 430px;
+  }
 }
 
 .scg-pdf-info {
